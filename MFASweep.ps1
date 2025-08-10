@@ -302,23 +302,23 @@ Function Invoke-M365WebPortalAuth{
     }
     else{
         if ($UAType -eq "Windows"){
-            $UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.56"
+            $UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0"
         }
         elseif($UAType -eq "Android"){
-            $UserAgent = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Mobile Safari/537.36"
+            $UserAgent = "Mozilla/5.0 (Linux; Android 14; Pixel 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36 OPR/108.0.0.0"
         }
         elseif($UAType -eq "iPhone"){
-            $UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Mobile/15E148 Safari/604.1"
+            $UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 15_8_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/374.0.773146746 Mobile/15E148 Safari/604.1"
         }
         elseif($UAType -eq "Linux"){
-            $UserAgent = "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:135.0) Gecko/20100101 Firefox/135.0"
+            $UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0"
         }
         elseif($UAType -eq "WindowsPhone"){
-            $UserAgent = "Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 635) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537"
+            $UserAgent = "Mozilla/5.0 (Windows Phone 10.0; Android 8.0.0; Microsoft; Lumia 950 XL) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/605.1.15 Edge/18.19042"
         }
         elseif($UAType -eq "MacOS"){
             # Intentionally using not the most recent version of Safari as the server side then expects to use seamless SSO for authentication
-            $UserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.5 Safari/605.1.15"
+            $UserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"
         }
         else{
         Write-Host -ForegroundColor Red "[*] Unknown User Agent Type. Try: Windows, Android, iPhone, Linux, WindowsPhone, or MacOS"
@@ -1257,4 +1257,5 @@ Function Load-ClientIDsAndAPIEndpoints {
     
     return @{ClientIDs = $ClientIDs; ApiEndpoints = $ApiEndpoints}
 }
+
 
